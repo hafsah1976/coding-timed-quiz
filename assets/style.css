@@ -1,0 +1,95 @@
+/* custom properties */
+:root {
+--font-family-1: 'Dancing Script', cursive;
+--font-family-2: 'Roboto', sans-serif;
+--dark-purple: #330f53;
+--white:linen;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    background-image:url(./images/stockphoto-1454707439-170667a.jpg);
+
+}
+.header-styling{
+
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+ 
+}
+
+p{
+
+    font-family: var(--font-family-2);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: justify;
+    padding: 4px;
+}
+/* styling buttons */
+button {
+    background: var(--dark-purple);
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    font-family: var(--font-family-2);
+    font-size: 22px;
+    letter-spacing: 0.21px;
+    line-height: 14px;
+    max-width: 255px;
+    padding: 10px 42px;
+    text-align: center;
+    transition-duration: 0.4s;
+    /* transition-property:box-shadow; */
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+  }
+
+  button:hover{
+
+    background-color: aliceblue;
+    color:black;
+    font-weight: bolder;
+  }
+
+  /* questions will appear on this card */
+.card{
+background-image: url("images/quick-start-personality-quiz.jpg");
+
+font-size: 36px;
+font-family: var(--font-family-2);
+justify-content: center;
+align-items: center;
+display: flex;
+
+}
+  
+.card-body{
+    justify-content: center;
+  
+
+}
+
+.card-title{
+
+    font-weight: bolder;
+}
+.card-subtitle{
+    font-size: 24px;
+    font-style: italic;
+}
+
+
+/* initially hiding everything except buttons that will begin click events */
+#questions,
+#final,
+#highscores,
+#correct
+ {
+    display: none;  
+  } 
+
