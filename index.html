@@ -1,46 +1,130 @@
 <!DOCTYPE html>
-<html  lang="en">
-    <head>
-<!-- Meta Tags -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width", initial-scale="1.0, shrink-to-fit=no">
+<html lang="en">
 
-<!-- CSS -->
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+     <!-- google fonts  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Josefin+Sans:wght@600&family=Lobster+Two&family=Roboto:wght@100&display=swap" rel="stylesheet">
+     
 
-<link rel="stylesheet" href="./assets/style.css">
 
-<!-- Google Fonts I have used in the whole project -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS --kinda running out of time -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-<!-- title -->
+    <!-- my CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
 
-<title>JavaScript Quiz</title>
-<!-- header contains highscore on the left and timer on the right -->
+    <!-- Page Title -->
+    <title>Coding Timed Quiz</title>
+</head>
+
 <body>
+    <!-- Container for Header -->
+    <header class="header-styling">
+        <!-- div for scores link and time -->
+        <div >
+            
+                <button id="view-scores" type="button">View High Scores</button>
+            </div>
+            <!-- Timer setting-->
+            <div>
+                <p class="d-flex time">Time: 75s</p>
+            </div>
+        </div>
+    </header>
    
-<header class="header-styling">
-    <div>
-        <button class="highscore-button">View Highscores</button>
-    </div>
-<div><p>Time Remaining: 75 Seconds </p></div></header>
+    <main>
+        <!-- Container for Intro, Questions and Answers / taken from bootstrap-->
+        <div class="container">
+            <!-- Section for H1 and Intro // Hide upon Start-->
+            <section id="intro">
+                <div class="row" class="quiz-card">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <h3 >Greetings! Welcome to the Coding Quiz Challenge!</h3>
+                        <p>Test your knowledge and try to answer the following code-related questions within 75 seconds. 
+                            <br>Keep in mind that incorrect answers will penalize your time by ten seconds!</p>
+                        <button id="startQuiz" type="button" class="mx-auto d-block">Start Quiz</button></p>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Section for Question and Answers // Shows up on Start quiz-->
+            <section id="questions">
+                <div class="quiz-card">
+                  
+                   
+                        <h2 id="question">question</h2>
+                        <ul class="nobullets">
+                            <li class="mb-3"><button id="answer1" value="0" type="button"
+                                    class=" answerBtn">Answer-1</button></li>
+                            <li class="mb-3"><button id="answer2" value="1" type="button"
+                                    class=" answerBtn">Answer-2</button></li>
+                            <li class="mb-3"><button id="answer3" value="2" type="button"
+                                    class=" answerBtn">Answer-3</button></li>
+                            <li class="mb-3"><button id="answer4" value="3" type="button"
+                                    class=" answerBtn">Answer-4</button></li>
+                        </ul>
+                        <div id="boolean" class="font-weight-light font-italic">
+                            <hr>
+                            <!-- Correct or Wrong added via JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-   <main>
-    <!-- Quiz card placement -->
-    <section>
-        
-<div class="card" >
-    <div class="card-body">
-      <h5 class="card-title">Greetings<placeholder></placeholder>! 
-        <p>Put your JavaScript Knowledge to test!</p>
-        <p>Challenge yourself and answer all the questions within 75 seconds!</p></h5>
-      <p class="card-subtitle">Click the Start Quiz button to begin!</p>
-     <button id="start" type="button" >Start Quiz</button>
-    </div>
-  </div>
-    </section>
-  </main>
+            <!--  Final Score and Name -->
+            <section id="quizend">
+                <div class="quiz-card">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <h2>Quiz Completed!</h2>
+                        <p>Your final score is: <span id="score" class="pl-1">0</span></p>
+               
+                        <p>Your initials: <span class="ml-1"><input placeholder="initials" id="initials" /></span>
+                            <button id="submit-score" class="d-inline-block">Submit</button>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--  High Scores -->
+            <section id="highscores">
+                <div >
+                   
+                            <h2>High Scores</h2>
+                            <!-- High scores to be added as a sorted desceding list -->
+                            <ol id="score-list">
+                              
+                            </ol>
+                            <button id="goback" class="d-inline-block mx-1 my-1">Go back</button>
+                            <button id="resetscores" class=" mx-1 my-1 d-inline-block">Clear scores</button>
+                    </div>
+                </div>
+            </section>
+
+              </div>
+    </main>
+
+   
+    <!-- Javascript - jquery  -->
+    <script src="js/script.js"></script>
+    <!-- javascript file for questions -->
+<script src="js/questions.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

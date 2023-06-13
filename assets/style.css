@@ -1,7 +1,7 @@
 /* custom properties */
 :root {
 --font-family-1: 'Dancing Script', cursive;
---font-family-2: 'Roboto', sans-serif;
+--font-family-2:  'Josefin Sans', sans-serif;
 --dark-purple: #330f53;
 --white:linen;
 }
@@ -10,26 +10,66 @@
     box-sizing: border-box;
   }
 
-body{
-    background-image:url(./images/stockphoto-1454707439-170667a.jpg);
-
-}
-.header-styling{
-
-   display:flex;
-   justify-content: space-between;
-   align-items: center;
- 
+  html, body {
+    height: 100%;
 }
 
-p{
+  .header-styling{
 
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+/* Introductory page */
+ .intro{
+ text-align: center;  
+ margin-top: 100px; 
+ font-size: 36px;
+ font-family: var(--font-family-2);
+ justify-content: center;
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+ margin-top:50px;
+ font-weight: bolder;
+ } 
+
+ p{
+        font-family: var(--font-family-2);
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 4px;
+        line-height: 2.5;
+    }
+
+
+ /* Quiz questions appear with the following settings */
+
+ .quiz-card{
+    display: none;
+    font-size: 36px;
     font-family: var(--font-family-2);
-    font-size: 24px;
-    font-weight: bold;
-    text-align: justify;
-    padding: 4px;
-}
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top:50px;
+    }
+      
+    .quizend{
+      display: none;
+      font-size: 36px;
+      font-family: var(--font-family-2);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-top:50px;
+      }
+        
+  
 /* styling buttons */
 button {
     background: var(--dark-purple);
@@ -37,12 +77,13 @@ button {
     color: var(--white);
     cursor: pointer;
     font-family: var(--font-family-2);
+    font-weight: bold;
     font-size: 22px;
     letter-spacing: 0.21px;
-    line-height: 14px;
+     line-height: 14px; 
     max-width: 255px;
     padding: 10px 42px;
-    text-align: center;
+    text-align:center;
     transition-duration: 0.4s;
     /* transition-property:box-shadow; */
     transition-timing-function: linear;
@@ -56,40 +97,90 @@ button {
     font-weight: bolder;
   }
 
-  /* questions will appear on this card */
-.card{
-background-image: url("images/quick-start-personality-quiz.jpg");
-
-font-size: 36px;
-font-family: var(--font-family-2);
-justify-content: center;
-align-items: center;
-display: flex;
-
-}
   
-.card-body{
-    justify-content: center;
-  
-
-}
-
-.card-title{
-
-    font-weight: bolder;
-}
-.card-subtitle{
-    font-size: 24px;
-    font-style: italic;
-}
+    
+    body {
+            
+        display: flex;
+        flex-direction: column;
+    }
+    
+        
+    /* Remove bullet points from answers button list */
+    ul.nobullets {
+    list-style-type: none;
+    }
+    
+    /* Answer button styling */
+    .answerBtn,
+    .answerBtn:hover,
+    .answerBtn:active,
+    .answerBtn:focus,
+    .answerBtn:active:focus {
+        box-shadow: none;
+        outline: none;
+      
+    }
+    
 
 
 /* initially hiding everything except buttons that will begin click events */
 #questions,
-#final,
+#quizend,
 #highscores,
-#correct
- {
+#boolean
+#answerBtn {
     display: none;  
   } 
 
+/* Answers button styling */
+.answerBtn,
+.answerBtn:hover,
+.answerBtn:active,
+.answerBtn:focus,
+.answerBtn:active:focus {
+    box-shadow: none;
+    list-style: none;
+
+
+}
+
+
+/* Footer */
+footer {
+  
+    flex-shrink: 0;
+    font-size: .5rem;
+}
+
+
+/* Media queries */
+
+
+@media screen and (max-width: 600px) {
+    /* Adjust layout for small screens */
+    #view-score,
+    #time-remaining {
+      position: static;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    /* Adjust layout for extra small screens */
+    #intro-container {
+      margin-top: 50px;
+    }
+    
+    #quiz-container {
+      margin-top: 30px;
+    }
+    
+    #view-score,
+    #time-remaining {
+      position: static;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
