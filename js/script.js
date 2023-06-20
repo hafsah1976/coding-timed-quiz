@@ -172,7 +172,9 @@ function displayScores() {
 // clear scores
 function resetScores() {
     localStorage.clear();
-    scoreListElement.innerHTML="";
+    initialsInput.textContent="";
+    scoreListElement.textContent="";
+    highscoreEl.textContent="";
 }
 
 // adding EventListeners
