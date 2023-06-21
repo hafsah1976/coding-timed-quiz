@@ -25,7 +25,7 @@ The URL will mostly work in all browsers. The preferred Browser is Google Chrome
 
 The interface is simple and contains keywords to guide the user in navigating through the quiz. 
 
-![Main Page](main-screenshot.png)
+![Main Page](images/main-screenshot.png)
 
 ## Credits 
 
