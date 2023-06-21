@@ -47,24 +47,24 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ## Tests
 
-1. Testing the Timer Countdown: Result as Expected - The Countdown worked, and went down from 75 as shown below:
+1. Testing the Timer Countdown: Result as Expected - The Countdown worked, and went down from 75 as shown below :heavy_check_mark:
 
-![Timer Countdown](images/timer-test.png)   [x]
+![Timer Countdown](images/timer-test.png)   
    
-2. Testing Answer feedback: Result as Expected - This is a wrong answer to the question asked in the quiz. 
+2. Testing Answer feedback: Result as Expected - This is a wrong answer to the question asked in the quiz :heavy_check_mark:
 
-![Answer Feedback](images/checking-answer-feedback.png)  [x]
+![Answer Feedback](images/checking-answer-feedback.png) 
   
-3. Test the Highscore button: Result as Expected
+3. Test the Highscore button: Result as Expected :heavy_check_mark:
 
-![Answer Feedback](images/checking-highscoreBtn.png)  [x]
+![Answer Feedback](images/checking-highscoreBtn.png)  
 
-4. Reaching the end of the Quiz: Results as Expected -  The score is displayed and the user is asked to input initials
+4. Reaching the end of the Quiz: Results as Expected -  The score is displayed and the user is asked to input initials :heavy_check_mark:
 
-![Quiz-Completed](images/Quiz-completed.png)  [x]
+![Quiz-Completed](images/Quiz-completed.png)  
 
-5. Saving the initials: The user must enter their initials and click on submit button to save the score as shown below:
+5. Saving the initials: The user must enter their initials and click on submit button to save the score as shown below :heavy_check_mark:
 
-![save-initials-score](images/save-score-and-initials.png) [x]
+![save-initials-score](images/save-score-and-initials.png) 
 
 
