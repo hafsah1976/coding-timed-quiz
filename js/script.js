@@ -172,8 +172,8 @@ function displayScores() {
 // clear scores
 function resetScores() {
     localStorage.clear();
-    initialsInput.textContent="";
-    scoreListElement.textContent="";
+  localStorage.removeItem( initialsInput);
+   localStorage.removeItem( scoreListElement);
     highscoreEl.textContent="";
 }
 
